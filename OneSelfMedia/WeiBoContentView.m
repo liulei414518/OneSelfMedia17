@@ -28,6 +28,8 @@
         [self addSubview:btn];
 
         
+        
+        
         UIView* tableBgView=[[UIView alloc]initWithFrame:CGRectMake(90, 0, 1341/2, 1225/2)];
         tableBgView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"jurunBg.png"]];
         [self addSubview:tableBgView];
@@ -692,16 +694,6 @@
     return str;
 }
 
--(void) saveImage:(UIImage *)image withFileName:(NSString *)imageName inDirectory:(NSString *)directoryPath {
-    [UIImageJPEGRepresentation(image, 1.0) writeToFile:[directoryPath stringByAppendingString:[NSString stringWithFormat:@"%@", imageName]] options:NSAtomicWrite error:nil];
-}
-
-
--(UIImage *) loadImage:(NSString *)fileName inDirectory:(NSString *)directoryPath {
-    UIImage * result = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", directoryPath, fileName]];
-    
-    return result;
-}
 
 
 @end
