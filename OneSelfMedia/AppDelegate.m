@@ -7,14 +7,19 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LoadViewController.h"
 @implementation AppDelegate
+@synthesize window=_window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    LoadViewController* loadView=[[LoadViewController alloc]init];
+    self.window.rootViewController=loadView;
+    
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
