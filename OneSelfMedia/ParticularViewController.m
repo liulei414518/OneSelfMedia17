@@ -28,6 +28,11 @@
     
     return self;
 }
+-(void)sendMassage:(NSString*)str{
+
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
